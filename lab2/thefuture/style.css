@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+.blok {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin: 10px 0px;
+}
+
+.rood {
+  background-color: red;
+}
+
+.geel {
+  background-color: yellow;
+  color: black;
+}
+
+.blauw {
+  background-color: blue;
+}
+
+@media (min-width: 500px){
+    
+}
