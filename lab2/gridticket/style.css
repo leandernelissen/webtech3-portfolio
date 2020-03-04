@@ -1,0 +1,51 @@
+section {
+  border: 1px black solid;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(bgkopie.jpg);
+  background-position: center;
+}
+
+img {
+  width: 150px;
+}
+
+#links {
+  border-right: 1px black solid;
+}
+#links {
+  flex: 3;
+}
+h1 {
+  font-size: 50px;
+  margin: 0;
+}
+p {
+  margin-top: 40px;
+}
+#rechts {
+  flex: 1;
+}
+
+#top h1,
+#top p {
+  text-align: center;
+}
+
+#midden {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#midden * {
+  border: 1px black solid;
+  width: 100%;
+  text-align: center;
+}
+#beneden {
+  text-align: center;
+}
+#rechts {
+  text-align: center;
+  align-self: center;
+}
