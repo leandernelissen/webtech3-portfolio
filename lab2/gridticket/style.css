@@ -21,7 +21,8 @@ h1 {
   margin: 0;
 }
 #top p {
-  margin-top: 40px;
+  padding-top: 40px;
+  margin: 0;
 }
 #rechts {
   flex: 1;
@@ -51,4 +52,30 @@ h1 {
 #rechts {
   text-align: center;
   align-self: center;
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  #top {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 30px 0;
+  }
+  #top h1 {
+    order: -1;
+  }
+
+  #top p {
+    padding: 0;
+  }
+
+  #beneden {
+    display: none;
+  }
 }

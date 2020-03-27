@@ -2,12 +2,17 @@
   box-sizing: border-box;
 }
 
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 15px;
+}
+
 .blok {
-  width: 100%;
   text-align: center;
   padding: 20px;
   color: white;
-  margin: 10px 0px;
 }
 
 .rood {
@@ -17,12 +22,13 @@
 .geel {
   background-color: yellow;
   color: black;
+  grid-column: 4/6;
+  grid-row: 2/4;
 }
 
 .blauw {
   background-color: blue;
-}
-
-@media (min-width: 500px){
-    
+  grid-column: 1 / span 1;
+  order: 1;
+  grid-row: 1 / 4;
 }
