@@ -17,6 +17,7 @@ body {
 	height: 100%;
 	width: 100%;
 	text-align: center;
+	background-image: url(pokemon.png);
 }
 
 #wrapper h1 {
@@ -42,4 +43,8 @@ img {
 
 #temperatuur::after {
 	content: '°C';
+}
+
+#header img {
+	width: 100px;
 }

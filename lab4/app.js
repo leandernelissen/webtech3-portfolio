@@ -1,3 +1,24 @@
+/*const pokeData = {
+	url: 'https://pokeapi.co/api/v2/',
+	type: 'pokemon',
+	id: '25'
+};
+const { url, type, id } = pokeData;
+const pokeUrl = `${url}${type}/${id}`;
+
+fetch(pokeUrl).then((data) => data.json()).then((pokemon) => generateHtml(pokemon));
+
+const generateHtml = (data) => {
+	console.log(data);
+	const html = `
+		<div class="name">${data.name}</div>
+		<img src=${data.sprites.front_default}>
+		
+	`;
+	const pokemonDiv = document.querySelector('.pokemon');
+	pokemonDiv.innerHTML = html;
+};*/
+
 class App {
 	constructor() {
 		this.getLocation();
@@ -26,17 +47,51 @@ class App {
 				if (data.currently.temperature < 20) {
 					document.getElementById('temperatuur').innerHTML = data.currently.temperature;
 					document.getElementById('status').innerHTML = data.currently.summary;
-					document.getElementById('wrapper').style.backgroundImage = "url('regenjas.png')";
-					document.getElementById('wrapper').style.color = 'white';
-					document.getElementById('header').style.color = 'white';
-					document.getElementById('header').innerHTML =
-						'Het lijkt erop dat het slecht weer bij u is. Regenjas nodig?';
+
+					const pokeData = {
+						url: 'https://pokeapi.co/api/v2/',
+						type: 'pokemon',
+						id: '25'
+					};
+					const { url, type, id } = pokeData;
+					const pokeUrl = `${url}${type}/${id}`;
+
+					fetch(pokeUrl).then((data) => data.json()).then((pokemon) => generateHtml(pokemon));
+
+					const generateHtml = (data) => {
+						console.log(data);
+						const html = `
+							<div class="name">Het is koud bij je, heb je de warmte van ${data.name} nodig?</div>
+							<img src=${data.sprites.front_default}>
+							
+						`;
+						const pokemonDiv = document.querySelector('#header');
+						pokemonDiv.innerHTML = html;
+					};
 				} else {
 					document.getElementById('temperatuur').innerHTML = data.currently.temperature;
 					document.getElementById('status').innerHTML = data.currently.summary;
-					document.getElementById('wrapper').style.backgroundImage = "url('zwembroek.jpg')";
-					document.getElementById('header').innerHTML =
-						'Het lijkt erop dat het goed weer bij u is. Zwembroek nodig?';
+
+					const pokeData = {
+						url: 'https://pokeapi.co/api/v2/',
+						type: 'pokemon',
+						id: '7'
+					};
+					const { url, type, id } = pokeData;
+					const pokeUrl = `${url}${type}/${id}`;
+
+					fetch(pokeUrl).then((data) => data.json()).then((pokemon) => generateHtml(pokemon));
+
+					const generateHtml = (data) => {
+						console.log(data);
+						const html = `
+							<div class="name">Het is warm bij je, heb je verkoeling van ${data.name} nodig?</div>
+							<img src=${data.sprites.front_default}>
+							
+						`;
+						const pokemonDiv = document.querySelector('#header');
+						pokemonDiv.innerHTML = html;
+					};
 				}
 			})
 			.catch((err) => {
