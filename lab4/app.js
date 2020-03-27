@@ -1,24 +1,3 @@
-/*const pokeData = {
-	url: 'https://pokeapi.co/api/v2/',
-	type: 'pokemon',
-	id: '25'
-};
-const { url, type, id } = pokeData;
-const pokeUrl = `${url}${type}/${id}`;
-
-fetch(pokeUrl).then((data) => data.json()).then((pokemon) => generateHtml(pokemon));
-
-const generateHtml = (data) => {
-	console.log(data);
-	const html = `
-		<div class="name">${data.name}</div>
-		<img src=${data.sprites.front_default}>
-		
-	`;
-	const pokemonDiv = document.querySelector('.pokemon');
-	pokemonDiv.innerHTML = html;
-};*/
-
 class App {
 	constructor() {
 		this.getLocation();
