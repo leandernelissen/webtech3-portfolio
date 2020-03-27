@@ -8,4 +8,4 @@ https://github.com/WardVandevoort/2imd-webtech3-lab1
 ![Garden](https://github.com/leandernelissen/webtech3-portfolio/blob/master/screenshot_garden.png "Garden proof")
 
 # Lab 4
-![Weather app](https://codepen.io/leandernelissen/pen/jOPXEwb "Weather App")
+https://codepen.io/leandernelissen/pen/jOPXEwb
