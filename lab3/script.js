@@ -14,6 +14,14 @@ class Note {
 
 		newNote.appendChild(newP);
 
+		let newA = document.createElement('a'); // create remove link
+		newA.setAttribute('class', 'card-remove'); //voeg class toe
+		newA.setAttribute('href', '#'); // link naar niets
+		newA.innerHTML = 'Remove';
+
+		newNote.appendChild(newA);
+		newA.addEventListener('click', this.remove.bind(newNote));
+
 		// HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
 
 		return newNote;
@@ -54,6 +62,13 @@ class App {
 		this.btnAdd = document.querySelector('#btnAddNote');
 		this.btnAdd.addEventListener('click', this.createNote.bind(this));
 		this.loadNotesFromStorage();
+		this.inputField = document.querySelector('#txtAddNote');
+		this.inputField.addEventListener('keydown', (e) => {
+			if (e.keyCode == 13) {
+				e.preventDefault();
+				this.createNote();
+			}
+		});
 		// this.btnAdd = ???
 		// this.btnAdd.addEventListener("click", this.createNote.bind(this));
 		// this.loadNotesFromStorage();
@@ -76,10 +91,14 @@ class App {
 		// note.add();
 		let text = document.querySelector('#txtAddNote').value;
 
-		let note = new Note(text);
-		note.add();
-		note.saveToStorage();
-		// this.reset();
+		if (text == '') {
+			alert('Het is niet mogelijk om een lege note toe te voegen');
+		} else {
+			let note = new Note(text);
+			note.add();
+			note.saveToStorage();
+			this.reset();
+		}
 	}
 
 	reset() {
