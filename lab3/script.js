@@ -46,9 +46,13 @@ class Note {
 	remove() {
 		// HINT🤩 the meaning of 'this' was set by bind() in the createElement function
 		// in this function, 'this' will refer to the current note element
-		let removeBtn = document.getElementById('btnAddNote');
+		this.remove();
+		let todo = JSON.parse(localStorage.getItem(`todo`)) || [];
 
-		removeBtn.onclick = function() {};
+		let todoText = this.querySelector(`p`).innerHTML; // p selecteren
+		let index = todo.indexOf(todoText); // de index van de p nemen
+		todo.splice(index, 1); // splice removes content uit array
+		localStorage.setItem('todo', JSON.stringify(todo)); // localstorage updaten
 	}
 }
 
@@ -62,8 +66,7 @@ class App {
 		this.btnAdd = document.querySelector('#btnAddNote');
 		this.btnAdd.addEventListener('click', this.createNote.bind(this));
 		this.loadNotesFromStorage();
-		this.inputField = document.querySelector('#txtAddNote');
-		this.inputField.addEventListener('keydown', (e) => {
+		document.querySelector(`#txtAddNote`).addEventListener('keydown', (e) => {
 			if (e.keyCode == 13) {
 				e.preventDefault();
 				this.createNote();
