@@ -9,9 +9,13 @@ https://github.com/WardVandevoort/2imd-webtech3-lab1
 
 # Lab 2
 https://github.com/leandernelissen/webtech3-portfolio/tree/master/lab2
+Codepen THE FUTURE: https://codepen.io/leandernelissen/pen/GRJbLqp
+Codepen Gridticket: https://codepen.io/leandernelissen/pen/bGdPJwg
 
 # Lab 3
 https://github.com/leandernelissen/webtech3-portfolio/tree/master/lab3
+Codepen: https://codepen.io/leandernelissen/pen/WNvqWoj
+
 
 # Lab 4
 https://codepen.io/leandernelissen/pen/jOPXEwb
